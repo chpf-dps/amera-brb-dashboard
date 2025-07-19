@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -65,11 +65,27 @@ const ToolButton: React.FC<ToolButtonProps> = ({ name, url, icon, description })
 );
 
 const DashboardGrid: React.FC = () => {
-  const currentDate = new Date().toLocaleDateString('de-DE', {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const currentDate = currentTime.toLocaleDateString('de-DE', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric'
+  });
+
+  const currentTimeString = currentTime.toLocaleTimeString('de-DE', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
   });
 
   return (
@@ -82,6 +98,7 @@ const DashboardGrid: React.FC = () => {
             <Calendar className="h-8 w-8 text-primary" />
             <div>
               <p className="font-medium">{currentDate}</p>
+              <p className="text-sm text-muted-foreground">{currentTimeString}</p>
               <Badge variant="secondary" className="mt-1">MS Amera</Badge>
             </div>
           </div>
