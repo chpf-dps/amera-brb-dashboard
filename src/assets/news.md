@@ -1,13 +1,11 @@
-# 📢 Aktuelle Bordmeldungen
+# 📢 Infos
 
 ## ⚠️ Wichtige Hinweise
-- **Nächster Hafen**: Palma de Mallorca - Ankunft 08:00 Uhr
-- **Wetter**: Sonnig, 24°C, leichte Brise aus Südwest
+- **Nächster Hafen**: Vigo - Ankunft 08:00 Uhr
 
 ## ℹ️ Informationen  
-- **Trinkgeld-Empfehlung**: Automatisch über Bordkarte oder bar an der Rezeption
-- **WiFi-Status**: Starkes Signal verfügbar
+- **Zeitzone**: London (DE -1)
 
-## ✅ Erledigte Aufgaben
-- Ausflugsbuchungen für Mallorca sind geöffnet
-- Neue Sicherheitshinweise im Team-Chat verfügbar
+## 📄 Aufgaben
+- Vorbereitungen AMR 138
+- Work & Rest Hours pflegen
